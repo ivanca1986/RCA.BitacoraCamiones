@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RCA.BitacoraCamiones")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+45810dfe894773c59c6a51507d0aa25b82655b50")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+03ae3c11d5444d2aa32f1c6d053ae765252538a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("RCA.BitacoraCamiones")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RCA.BitacoraCamiones")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
