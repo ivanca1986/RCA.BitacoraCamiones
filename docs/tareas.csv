@@ -1,0 +1,31 @@
+Title,Description,Status,Priority,Type
+Instalar Visual Studio 2022,Instalar IDE con soporte MAUI,Backlog,High,Setup
+Instalar .NET SDK 8,Configurar entorno de desarrollo,Backlog,High,Setup
+Instalar Git,Instalar control de versiones,Backlog,High,Setup
+Clonar repositorio,Clonar proyecto desde GitHub,Backlog,High,Setup
+Crear estructura del proyecto,Crear carpetas Models Services Views,Backlog,High,Setup
+Instalar sqlite-net-pcl,Agregar paquete NuGet SQLite,Backlog,High,Database
+Crear modelo Bitacora,Definir estructura de datos,Backlog,High,Database
+Crear DatabaseService,Implementar acceso a datos,Backlog,High,Database
+Configurar ruta de base de datos,Definir ubicación local de SQLite,Backlog,High,Database
+Probar inserción básica,Validar que SQLite funciona,Backlog,High,Database
+Crear pantalla agregar bitacora,Formulario para ingresar datos,Backlog,High,Frontend
+Validar datos de entrada,Evitar datos vacíos o inválidos,Backlog,Medium,Frontend
+Guardar datos en SQLite,Conectar UI con base de datos,Backlog,High,Frontend
+Crear lista de bitacoras,Mostrar registros en pantalla,Backlog,High,Frontend
+Implementar CollectionView,Mostrar lista de datos correctamente,Backlog,High,Frontend
+Implementar eliminar registro,Borrar datos de la base,Backlog,Medium,Frontend
+Implementar edición de registro,Actualizar datos existentes,Backlog,Medium,Frontend
+Diseñar interfaz en Figma,Definir UI antes de implementar,Backlog,Low,UI
+Mejorar diseño visual,Ajustar layout y estilos,Backlog,Medium,UI
+Implementar navegación,Navegar entre pantallas,Backlog,High,Frontend
+Probar en emulador,Validar funcionamiento en Android Emulator,Backlog,High,Testing
+Probar en dispositivo físico,Validar app en teléfono real,Backlog,High,Testing
+Validar persistencia de datos,Confirmar que datos no se pierden,Backlog,High,Testing
+Crear README.md,Documentar proyecto en GitHub,Backlog,High,Documentation
+Documentar requerimientos,Definir funcionalidades del sistema,Backlog,Medium,Documentation
+Documentar modelo de datos,Explicar tablas y relaciones,Backlog,Medium,Documentation
+Capturas de pantalla,Mostrar funcionamiento de la app,Backlog,Low,Documentation
+Implementar búsqueda,Buscar registros por criterios,Backlog,Low,Enhancement
+Implementar filtros por fecha,Filtrar registros por rango,Backlog,Low,Enhancement
+Exportar datos,Permitir exportación de información,Backlog,Low,Enhancement
