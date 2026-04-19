@@ -4,5 +4,5 @@
 2. Guardar localmente
 3. Marcar como pendiente
 4. Detectar conexión
-5. Sincronizar con API
+5. Sincronizar
 6. Actualizar estado

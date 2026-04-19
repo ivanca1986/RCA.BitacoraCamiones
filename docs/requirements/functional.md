@@ -1,6 +1,6 @@
 # Requerimientos funcionales
 
-- Registrar ingreso de camión
+- Registrar ingreso de camiones
 - Capturar fotografías
-- Guardar información sin conexión
+- Guardar información offline
 - Sincronizar datos con la nube

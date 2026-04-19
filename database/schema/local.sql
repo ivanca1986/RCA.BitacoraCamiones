@@ -1,7 +1,7 @@
 CREATE TABLE Ingreso (
-    Id INTEGER PRIMARY KEY AUTOINCREMENT,
-    Placa TEXT,
-    Conductor TEXT,
-    Fecha TEXT,
-    SyncStatus TEXT
+    ING_Id INT IDENTITY(1,1) PRIMARY KEY,
+    ING_Placa NVARCHAR(50),
+    ING_Conductor NVARCHAR(100),
+    ING_Fecha DATETIME,
+    ING_SyncStatus NVARCHAR(20)
 );
