@@ -1,17 +1,20 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using RCA.BitacoraCamiones.Data;
+using RCA.BitacoraCamiones.Views;
 
-namespace RCA.BitacoraCamiones
+namespace RCA.BitacoraCamiones;
+
+public partial class App : Application
 {
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
-        }
+    private readonly DatabaseService _db;
 
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(new AppShell());
-        }
+    public App()
+    {
+        InitializeComponent();
+        _db = new DatabaseService(); // ✔ solo UNA instancia
+    }
+
+    protected override Window CreateWindow(IActivationState? activationState)
+    {
+        return new Window(new TestPage(_db));
     }
 }

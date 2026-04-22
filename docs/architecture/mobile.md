@@ -1,0 +1,1 @@
+La aplicación utiliza el modelo moderno de MAUI basado en CreateWindow en lugar de MainPage para la inicialización de la interfaz.
