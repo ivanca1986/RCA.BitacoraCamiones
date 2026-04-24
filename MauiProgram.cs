@@ -17,6 +17,7 @@ namespace RCA.BitacoraCamiones
                 });
             builder.Services.AddSingleton<DatabaseService>();
             builder.Services.AddSingleton<IngresoRepository>();
+            builder.Services.AddSingleton<App>(); // 🔥 necesario
 
 #if DEBUG
             builder.Logging.AddDebug();

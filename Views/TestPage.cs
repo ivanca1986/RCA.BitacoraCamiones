@@ -9,61 +9,73 @@ public partial class TestPage : ContentPage
     public TestPage(DatabaseService db)
     {
         _db = db;
-
-        InitDB();
+        InitializeAsync();
 
         Content = new VerticalStackLayout
         {
             Padding = 40,
             Children =
-        {
-            new Label { Text = "BITÁCORA CAMIONES", FontSize = 30 },
-
-            new Button
             {
-                Text = "Insertar",
-                Command = new Command(async () =>
+                new Label { Text = "BITÁCORA CAMIONES", FontSize = 30 },
+
+                new Button
                 {
-                    if (_repo == null)
+                    Text = "Insertar",
+                    Command = new Command(async () =>
                     {
-                        await DisplayAlertAsync("Error", "DB no lista", "OK");
-                        return;
-                    }
+                        if (_repo == null)
+                        {
+                            await DisplayAlertAsync("Error", "DB no lista", "OK");
+                            return;
+                        }
 
-                    var ingreso = new Ingreso
-                    {
-                        ING_Placa = "ABC123",
-                        ING_Conductor = "Prueba",
-                        ING_Fecha = DateTime.Now,
-                        ING_SyncStatus = "Pending"
-                    };
+                        var ingreso = new Ingreso
+                        {
+                            ING_Placa = "ABC123",
+                            ING_Conductor = "Prueba",
+                            ING_Fecha = DateTime.Now,
+                            ING_SyncStatus = "Pending"
+                        };
 
-                    await _repo.Save(ingreso);
-                    await DisplayAlertAsync("OK", "Guardado", "OK");
-                })
-            },
+                        await _repo.Save(ingreso);
+                        await DisplayAlertAsync("OK", "Guardado", "OK");
+                    })
+                },
 
-            new Button
-            {
-                Text = "Ver",
-                Command = new Command(async () =>
+                new Button
                 {
-                    if (_repo == null)
+                    Text = "Ver",
+                    Command = new Command(async () =>
                     {
-                        await DisplayAlertAsync("Error", "DB no lista", "OK");
-                        return;
-                    }
+                        if (_repo == null)
+                        {
+                            await DisplayAlertAsync("Error", "DB no lista", "OK");
+                            return;
+                        }
 
-                    var lista = await _repo.GetAll();
+                        var lista = await _repo.GetAll();
 
-                    string resultado = string.Join("\n",
-                        lista.Select(x => $"{x.ING_Placa} - {x.ING_SyncStatus}")
-                    );
+                        string resultado = string.Join("\n",
+                            lista.Select(x => $"{x.ING_Placa} - {x.ING_SyncStatus}")
+                        );
 
-                    await DisplayAlertAsync("Datos", resultado, "OK");
-                })
+                        await DisplayAlertAsync("Datos", resultado, "OK");
+                    })
+                }
             }
-        }
         };
+    }
+
+    private async void InitializeAsync()
+    {
+        try
+        {
+            await _db.Init();
+            _repo = new IngresoRepository(_db);
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlertAsync("Error DB", ex.Message, "OK");
+        }
     }
 }
